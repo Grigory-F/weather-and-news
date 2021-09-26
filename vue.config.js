@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: '/mevn-app/',
+    publicPath: '/weather-and-news/',
     css: {
         loaderOptions: {
             sass: {
