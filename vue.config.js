@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath: '/mevn-app/'
+    publicPath: '/mevn-app/',
     css: {
         loaderOptions: {
             sass: {
