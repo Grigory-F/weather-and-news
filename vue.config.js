@@ -1,6 +1,6 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-    ? '/my-project/'
+    ? '/weather-and-news/'
     : '/',
     css: {
         loaderOptions: {
