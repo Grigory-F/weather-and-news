@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db3047cb704dfc430eb0",
+    "revision": "ab4bfe85cc225a07df9d",
     "url": "/weather-and-news/css/app.e7134bba.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-and-news/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "781244d0307daaee529aca78908e014e",
+    "revision": "cf188a3a4b7e05c70b3b824ae6944ce5",
     "url": "/weather-and-news/index.html"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-and-news/js/about.7864c12e.js"
   },
   {
-    "revision": "db3047cb704dfc430eb0",
-    "url": "/weather-and-news/js/app.d100344b.js"
+    "revision": "ab4bfe85cc225a07df9d",
+    "url": "/weather-and-news/js/app.b1acad29.js"
   },
   {
     "revision": "69e0aa8b9dd6bc6a1ef6",
@@ -56,7 +56,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-and-news/media/sunny.000d2a83.mp4"
   },
   {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "revision": "735ab4f94fbcd57074377afca324c813",
     "url": "/weather-and-news/robots.txt"
   }
 ]);
