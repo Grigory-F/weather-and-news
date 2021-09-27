@@ -1,14 +1,30 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c231e2a89fa7dc12d87",
-    "url": "/weather-and-news/css/app.732a0af5.css"
+    "revision": "db3047cb704dfc430eb0",
+    "url": "/weather-and-news/css/app.e7134bba.css"
+  },
+  {
+    "revision": "084d868724e758faeb5b318af66f8746",
+    "url": "/weather-and-news/fonts/Montserrat-Bold.084d8687.woff2"
+  },
+  {
+    "revision": "8b9d3cf3b8b2c4633f3db29e24714f55",
+    "url": "/weather-and-news/fonts/Montserrat-Bold.8b9d3cf3.woff"
+  },
+  {
+    "revision": "ade7167b34a3c904074ec3531ef643cb",
+    "url": "/weather-and-news/fonts/Montserrat-Regular.ade7167b.woff2"
+  },
+  {
+    "revision": "adfe328fa5459818ba2e517bde4eb17d",
+    "url": "/weather-and-news/fonts/Montserrat-Regular.adfe328f.woff"
   },
   {
     "revision": "82b9c7a5a3f405032b1db71a25f67021",
     "url": "/weather-and-news/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "1a2a745dbc0a9ffde667bad951ec5406",
+    "revision": "781244d0307daaee529aca78908e014e",
     "url": "/weather-and-news/index.html"
   },
   {
@@ -16,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weather-and-news/js/about.7864c12e.js"
   },
   {
-    "revision": "2c231e2a89fa7dc12d87",
-    "url": "/weather-and-news/js/app.782ea335.js"
+    "revision": "db3047cb704dfc430eb0",
+    "url": "/weather-and-news/js/app.d100344b.js"
   },
   {
     "revision": "69e0aa8b9dd6bc6a1ef6",

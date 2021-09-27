@@ -6,19 +6,18 @@
               <div class="weather-main__box-geo">
                 <Icons
                   name="geo"
-                  width="15px"
-                  class="weather-main__geo-icon"
+                  class="weather-main__geo-icon ui-icon"
                 ></Icons>
-                <span class="weather-main__sign-geo">{{ positionCity.city }}</span>
+                <span class="weather-main__sign-geo subtitle-main">{{ positionCity.city }}</span>
               </div>
               <div class="weather-main__box-header">
-                <h1 class="weather-main__header-sign">
+                <h1 class="weather-main__header-sign title-main">
                   Feels like
                   {{ (weather.main.feels_like - 273.15).toFixed(1) }}°C
                 </h1>
               </div>
               <div class="weather-main__box-condition">
-                <span class="weather-main__condition-sign">{{
+                <span class="weather-main__condition-sign subtitle-main">{{
                   weather.weather[0].main
                 }}</span>
                 <Icons name="sunny" class="weather-main__geo-icon"></Icons>
@@ -30,19 +29,19 @@
           <div class="weather-footer__wrap-indocators">
             <div class="weather-footer__box-indocator">
               <span class="weather-footer__sign-indicator">VISABILITY</span>
-              <p class="weather-footer__sign-value-indicator">
+              <p class="weather-footer__sign-value-indicator subtitle-second">
                 {{ weather.visibility }} km
               </p>
             </div>
             <div class="weather-footer__box-indocator">
               <span class="weather-footer__sign-indicator">HUMIDITY</span>
-              <p class="weather-footer__sign-value-indicator">
+              <p class="weather-footer__sign-value-indicator subtitle-second">
                 {{ weather.main.humidity }} %
               </p>
             </div>
             <div class="weather-footer__box-indocator">
               <span class="weather-footer__sign-indicator">WIND SPEED</span>
-              <p class="weather-footer__sign-value-indicator">
+              <p class="weather-footer__sign-value-indicator subtitle-second">
                 {{ weather.wind.speed }} m/s
               </p>
             </div>
@@ -65,6 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/styles/_core.scss';
 .weather {
   display: flex;
   flex-direction: column;
@@ -96,22 +96,18 @@ export default {
 
     margin-right: 5px;
     & > svg {
-      width: 15px;
     }
   }
 
   &__sign-geo {
     color: $font-color-second;
-    font-size: 48px;
   }
 
   &__box-header {
   }
 
   &__header-sign {
-    color: $font-color-main;
     margin: 0;
-    font-size: 64px;
   }
 
   &__box-condition {
@@ -122,7 +118,6 @@ export default {
   &__condition-sign {
     color: $font-color-main;
     margin-right: 5px;
-    font-size: 48px;
   }
 }
 .weather-footer {
@@ -149,7 +144,6 @@ export default {
     margin: 0;
     color: $font-color-main;
     white-space: nowrap;
-    font-size: 36px;
     font-weight: 700;
   }
 }
@@ -158,9 +152,7 @@ export default {
   .weather-main {
     flex: 1;
     &__container-signs {
-      display: flex;
-      height: 100%;
-      padding: 30px;
+      padding: 20px;
     }
 
     &__inner-signs {
@@ -168,8 +160,6 @@ export default {
     }
 
     &__box-geo {
-      display: flex;
-      align-items: center;
     }
 
     &__geo-icon {
@@ -177,26 +167,22 @@ export default {
 
       margin-right: 5px;
       & > svg {
-        width: 15px;
       }
     }
 
     &__sign-geo {
-      font-size: 32px;
     }
 
     &__box-header {
     }
 
     &__header-sign {
-      font-size: 48px;
     }
 
     &__box-condition {
     }
 
     &__condition-sign {
-      font-size: 32px;
     }
   }
   .weather-footer {
@@ -225,9 +211,6 @@ export default {
   .weather-main {
     flex: 1;
     &__container-signs {
-      display: flex;
-      height: 100%;
-      padding: 10px 20px;
     }
 
     &__inner-signs {
@@ -244,38 +227,33 @@ export default {
 
       margin-right: 5px;
       & > svg {
-        width: 15px;
       }
     }
 
     &__sign-geo {
-      @include calculate-size(font-size, 32, 24, 480)
+
     }
 
     &__box-header {
     }
 
     &__header-sign {
-      @include calculate-size(font-size, 48, 32, 480)
+
     }
 
     &__box-condition {
     }
 
     &__condition-sign {
-      @include calculate-size(font-size, 32, 24, 480)
+
     }
   }
   .weather-footer {
     padding: 10px 20px;
     &__wrap-indocators {
-      flex-wrap: wrap;
-      margin-bottom: -20px;
     }
 
     &__box-indocator {
-      margin-right: 20px;
-      margin-bottom: 20px;
     }
 
     &__sign-indicator {
@@ -283,7 +261,6 @@ export default {
     }
 
     &__sign-value-indicator {
-      @include calculate-size(font-size, 28, 24, 480)
     }
   }
 }

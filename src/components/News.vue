@@ -2,10 +2,19 @@
   <div class="grid-layout__news news-layout">
     <div class="news-layout__inner-header">
       <div @click="showExpNews = false">
-        <Icons name="arrow" class="news-layout__arrow-icon" :class="{'news-layout__arrow-icon--show':showExpNews}"></Icons>
+        <Icons
+          name="arrow"
+          class="news-layout__arrow-icon ui-icon"
+          :class="{ 'news-layout__arrow-icon--show': showExpNews }"
+        ></Icons>
       </div>
 
-      <p class="news-layout__sign-header" :class="{'news-layout__sign-header--show':showExpNews}">News Feed</p>
+      <p
+        class="news-layout__sign-header subtitle-main"
+        :class="{ 'news-layout__sign-header--show': showExpNews }"
+      >
+        News Feed
+      </p>
     </div>
     <div class="news-layout__wrap-news">
       <div
@@ -90,16 +99,24 @@ export default {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.85);
   opacity: 0;
+  overflow-y: scroll;
   transition: 0.4s ease;
   box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
   &--show {
     left: 0%;
     opacity: 1;
   }
   &__picture {
     width: 100%;
-    height: 200px;
     position: relative;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 56.5%;
+    }
     & > img {
       position: absolute;
       width: 100%;
@@ -120,6 +137,7 @@ export default {
 
   &__content {
     color: $font-color-main;
+    font-size: 18px;
   }
 }
 
@@ -143,12 +161,11 @@ export default {
     &--show {
       width: 20px;
       transform: translate(0px, 0);
-    opacity: 1;
+      opacity: 1;
     }
   }
 
   &__sign-header {
-    font-size: 28px;
     color: $font-color-main;
     margin: 0;
     transition: 0.3s ease;
@@ -164,6 +181,10 @@ export default {
     overflow-x: hidden;
     box-sizing: border-box;
     position: relative;
+    /* хром, сафари */
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   &__box-news-item {
@@ -171,24 +192,26 @@ export default {
 }
 
 .news-item {
-  height: 260px;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   cursor: pointer;
-  &__picture {
+ &__picture {
     width: 100%;
-    height: 130px;
     position: relative;
+    &::after {
+      content: "";
+      display: block;
+      padding-top: 56.2%;
+    }
     & > img {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-  }
-
+ }
   &__container-main {
     padding: 10px 20px;
     overflow: hidden;
@@ -219,6 +242,7 @@ export default {
   &__sign-title {
     margin: 0;
     color: $font-color-main;
+    font-size: 18px;
   }
 }
 
@@ -231,7 +255,6 @@ export default {
     }
 
     &__sign-header {
-      font-size: 32px;
     }
 
     &__wrap-news {
@@ -283,17 +306,12 @@ export default {
     }
 
     &__wrap-news {
-      display: flex;
-
-      gap: 20px;
     }
 
     &__box-news-item {
     }
   }
   .news-item {
-    flex: 1 1 350px;
-    margin: 0;
     &__picture {
       & > img {
       }
@@ -319,9 +337,6 @@ export default {
   }
 }
 @media (max-width: 480px) {
-  .grid-layout {
-    grid-template-columns: 1fr;
-  }
   .news-layout {
     &__inner-header {
     }
@@ -334,7 +349,6 @@ export default {
 
     &__wrap-news {
       display: flex;
-
       gap: 20px;
     }
 
@@ -342,8 +356,6 @@ export default {
     }
   }
   .news-item {
-    flex: 1 1 350px;
-    margin: 0;
     &__picture {
       & > img {
       }

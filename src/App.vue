@@ -78,13 +78,12 @@ export default {
 
 
 <style lang="scss">
+@import '@/assets/styles/_normalize.scss';
+@import '@/assets/styles/_fonts.scss';
 #app {
   font-family: $fonts-progect;
   position: relative;
   overflow: hidden;
-}
-body {
-  margin: 0;
 }
 
 .grid-layout {
@@ -116,91 +115,6 @@ body {
   }
 }
 
-.news-layout {
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  &__inner-header {
-    padding: 20px 20px;
-    display: flex;
-    align-items: center;
-  }
-
-  &__arrow-icon {
-  }
-
-  &__sign-header {
-    font-size: 28px;
-    color: $font-color-main;
-    margin: 0;
-  }
-
-  &__wrap-news {
-    padding: 0 20px;
-    overflow-y: scroll;
-    box-sizing: border-box;
-  }
-
-  &__box-news-item {
-  }
-}
-
-.news-item {
-  height: 260px;
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-  &__picture {
-    width: 100%;
-    height: 130px;
-    position: relative;
-    & > img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__container-main {
-    padding: 10px 20px;
-    overflow: hidden;
-    flex: 1;
-  }
-
-  &__inner-headers {
-    display: flex;
-    justify-content: space-between;
-    color: $font-color-second;
-    font-size: 16px;
-  }
-
-  &__sourse {
-    color: $font-color-second;
-    font-weight: 700;
-    white-space: nowrap;
-    font-size: 16px;
-  }
-
-  &__date-pulished {
-  }
-
-  &__title {
-    margin-top: 5px;
-  }
-
-  &__sign-title {
-    margin: 0;
-    color: $font-color-main;
-  }
-}
-
-
-
-
-
 
 @media (max-width: 1200px) {
   .grid-layout {
@@ -211,283 +125,59 @@ body {
   .grid-layout {
     grid-template-columns: 1fr;
   }
-  .news-layout {
-    &__inner-header {
-    }
+ 
+}
 
-    &__arrow-icon {
-    }
 
-    &__sign-header {
-      font-size: 32px;
-    }
+.title-main {
+    font-size: 64px;
+    color: $font-color-main;
+}
 
-    &__wrap-news {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+.subtitle-main {
+    font-size: 48px;
+}
 
-    &__box-news-item {
-    }
-  }
-  .news-item {
-    flex: 1 1 350px;
-    margin: 0;
-    &__picture {
-      & > img {
-      }
-    }
+.subtitle-second {
+    font-size: 36px;
+}
 
-    &__container-main {
+.ui-icon {
+    & > svg {
+        width: 30px;
     }
-
-    &__inner-headers {
-    }
-
-    &__sourse {
-    }
-
-    &__date-pulished {
-    }
-
-    &__title {
-    }
-
-    &__sign-title {
-    }
-  }
 }
 
 @media (max-width: 768px) {
-  .grid-layout {
-    grid-template-columns: 1fr;
-  }
-  .news-layout {
-    &__inner-header {
+    .title-main {
+        font-size: 48px;
     }
-
-    &__arrow-icon {
+    
+    .subtitle-main {
+        font-size: 32px;
     }
-
-    &__sign-header {
+    .ui-icon {
+        & > svg {
+            width: 25px;
+        }
     }
-
-    &__wrap-news {
-      display: flex;
-
-      gap: 20px;
-    }
-
-    &__box-news-item {
-    }
-  }
-  .news-item {
-    flex: 1 1 350px;
-    margin: 0;
-    &__picture {
-      & > img {
-      }
-    }
-
-    &__container-main {
-    }
-
-    &__inner-headers {
-    }
-
-    &__sourse {
-    }
-
-    &__date-pulished {
-    }
-
-    &__title {
-    }
-
-    &__sign-title {
-    }
-  }
-
-  .weather-main {
-    flex: 1;
-    &__container-signs {
-      display: flex;
-      height: 100%;
-      padding: 30px;
-    }
-
-    &__inner-signs {
-      margin: auto 0;
-    }
-
-    &__box-geo {
-      display: flex;
-      align-items: center;
-    }
-
-    &__geo-icon {
-      display: flex;
-
-      margin-right: 5px;
-      & > svg {
-        width: 15px;
-      }
-    }
-
-    &__sign-geo {
-      font-size: 32px;
-    }
-
-    &__box-header {
-    }
-
-    &__header-sign {
-      font-size: 48px;
-    }
-
-    &__box-condition {
-    }
-
-    &__condition-sign {
-      font-size: 32px;
-    }
-  }
-  .weather-footer {
-    padding: 30px;
-    &__wrap-indocators {
-      flex-wrap: wrap;
-      margin-bottom: -20px;
-    }
-
-    &__box-indocator {
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-
-    &__sign-indicator {
-      font-size: 16px;
-    }
-
-    &__sign-value-indicator {
-      font-size: 28px;
-    }
-  }
 }
 
 @media (max-width: 480px) {
-  .grid-layout {
-    grid-template-columns: 1fr;
-  }
-  .news-layout {
-    &__inner-header {
+    .title-main {
+        @include calculate-size(font-size, 48, 36, 480)
     }
-
-    &__arrow-icon {
+    
+    .subtitle-main {
+        @include calculate-size(font-size, 32, 24, 480)
     }
-
-    &__sign-header {
+    .subtitle-second {
+        @include calculate-size(font-size, 28, 24, 480)
     }
-
-    &__wrap-news {
-      display: flex;
-
-      gap: 20px;
+    .ui-icon {
+        & > svg {
+            width: 20px;
+        }
     }
-
-    &__box-news-item {
-    }
-  }
-  .news-item {
-    flex: 1 1 350px;
-    margin: 0;
-    &__picture {
-      & > img {
-      }
-    }
-
-    &__container-main {
-    }
-
-    &__inner-headers {
-    }
-
-    &__sourse {
-    }
-
-    &__date-pulished {
-    }
-
-    &__title {
-    }
-
-    &__sign-title {
-    }
-  }
-
-  .weather-main {
-    flex: 1;
-    &__container-signs {
-      display: flex;
-      height: 100%;
-      padding: 10px 20px;
-    }
-
-    &__inner-signs {
-      margin: auto 0;
-    }
-
-    &__box-geo {
-      display: flex;
-      align-items: center;
-    }
-
-    &__geo-icon {
-      display: flex;
-
-      margin-right: 5px;
-      & > svg {
-        width: 15px;
-      }
-    }
-
-    &__sign-geo {
-      @include calculate-size(font-size, 32, 24, 480)
-    }
-
-    &__box-header {
-    }
-
-    &__header-sign {
-      @include calculate-size(font-size, 48, 32, 480)
-    }
-
-    &__box-condition {
-    }
-
-    &__condition-sign {
-      @include calculate-size(font-size, 32, 24, 480)
-    }
-  }
-  .weather-footer {
-    padding: 10px 20px;
-    &__wrap-indocators {
-      flex-wrap: wrap;
-      margin-bottom: -20px;
-    }
-
-    &__box-indocator {
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-
-    &__sign-indicator {
-      @include calculate-size(font-size, 16, 14, 480)
-    }
-
-    &__sign-value-indicator {
-      @include calculate-size(font-size, 28, 24, 480)
-    }
-  }
 }
 </style>
