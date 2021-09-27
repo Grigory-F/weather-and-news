@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/weather-and-news/precache-manifest.382dee935773ce67d1bc5daceed6530b.js"
+  "/weather-and-news/precache-manifest.2b2df778dc7297e847120f6eff0efce0.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mevn-app"});
